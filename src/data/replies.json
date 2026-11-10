@@ -1,0 +1,21 @@
+[
+  { "question": "Jeans", "response": ["Please select your budget (500 - 1000, 1000 - 1500, 1500 - 2000)"] },
+  { "question": "500 - 1000", "response": ["Here are your product suggestions:-", "Wrogn, Link: https://www.wrogn.in", "Flying Machine, Link: https://www.flyingmachine.com"] },
+  { "question": "1000 - 1500", "response": ["Here are your product suggestions:-", "Levi's, Link: https://www.levi.in", "Pepe Jeans, Link: https://www.pepejeans.in"] },
+  { "question": "1500 - 2000", "response": ["Here are your product suggestions:-", "Jack & Jones, Link: https://www.jackjones.in", "Lee, Link: https://www.lee.in"] },
+
+  { "question": "Smartphone", "response": ["Please select your budget (10000 - 20000, 20000 - 40000, 40000 - 60000)"] },
+  { "question": "10000 - 20000", "response": ["Here are your product suggestions:-", "Redmi Note, Link: https://www.mi.com/in", "Realme Narzo, Link: https://www.realme.com/in"] },
+  { "question": "20000 - 40000", "response": ["Here are your product suggestions:-", "OnePlus Nord, Link: https://www.oneplus.in", "Samsung Galaxy A, Link: https://www.samsung.com/in"] },
+  { "question": "40000 - 60000", "response": ["Here are your product suggestions:-", "Google Pixel, Link: https://store.google.com", "iPhone SE, Link: https://www.apple.com/in"] },
+
+  { "question": "Laptop", "response": ["Please select your budget (30000 - 50000, 50000 - 80000, 80000 - 120000)"] },
+  { "question": "30000 - 50000", "response": ["Here are your product suggestions:-", "Acer Aspire, Link: https://www.acer.com/in", "HP 15s, Link: https://www.hp.com/in"] },
+  { "question": "50000 - 80000", "response": ["Here are your product suggestions:-", "Lenovo IdeaPad, Link: https://www.lenovo.com/in", "ASUS Vivobook, Link: https://www.asus.com/in"] },
+  { "question": "80000 - 120000", "response": ["Here are your product suggestions:-", "MacBook Air, Link: https://www.apple.com/in", "Dell XPS, Link: https://www.dell.com/in"] },
+
+  { "question": "T-Shirt", "response": ["Please select your budget (200 - 500, 500 - 800, 800 - 1200)"] },
+  { "question": "200 - 500", "response": ["Here are your product suggestions:-", "Bewakoof, Link: https://www.bewakoof.com", "Max Fashion, Link: https://www.maxfashion.in"] },
+  { "question": "500 - 800", "response": ["Here are your product suggestions:-", "Roadster, Link: https://www.myntra.com", "H&M, Link: https://www2.hm.com/en_in"] },
+  { "question": "800 - 1200", "response": ["Here are your product suggestions:-", "U.S. Polo Assn., Link: https://www.uspoloassn.in", "Puma, Link: https://in.puma.com"] }
+]
