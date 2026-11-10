@@ -34,7 +34,7 @@ button { font-family: inherit; cursor: pointer; color: inherit; }
 /* Sidebar */
 .sidebar { width: 240px; flex-shrink: 0; background: var(--sidebar); border-right: 1px solid var(--border); display: flex; flex-direction: column; }
 .close-row { display: none; background: none; border: 0; text-align: right; padding: 8px 12px; color: var(--title); }
-.new-chat { display: flex; align-items: center; gap: 10px; width: 100%; padding: 14px 12px; border: 0; background: var(--accent); color: var(--accent-text); font-size: 16px; text-align: left; }
+.new-chat { text-decoration: none; display: flex; align-items: center; gap: 10px; width: 100%; padding: 14px 12px; border: 0; background: var(--accent); color: var(--accent-text); font-size: 16px; text-align: left; }
 .new-chat span { flex: 1; }
 .prev-btn { display: block; margin: 16px; padding: 10px; text-align: center; text-decoration: none; background: var(--accent); color: var(--accent-text); border-radius: 4px; font-size: 12px; font-weight: 700; }
 

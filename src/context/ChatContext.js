@@ -15,6 +15,18 @@ export function ChatProvider({ children }) {
 
   useEffect(() => save(KEYS.current, chat), [chat]);
   useEffect(() => save(KEYS.history, history), [history]);
+
+  // Keep the current conversation mirrored into history (so /history always has it)
+  useEffect(() => {
+    if (chat.messages.length === 0) return;
+    setHistory((h) => {
+      const existing = h.find((x) => x.id === chat.id);
+      if (existing) {
+        return h.map((x) => (x.id === chat.id ? { ...x, messages: chat.messages } : x));
+      }
+      return [{ id: chat.id, date: new Date().toISOString(), messages: chat.messages }, ...h];
+    });
+  }, [chat]);
   useEffect(() => {
     save(KEYS.theme, theme);
     document.documentElement.setAttribute("data-theme", theme);
@@ -45,26 +57,19 @@ export function ChatProvider({ children }) {
     }));
   }, []);
 
-  const upsertHistory = (conv) => {
-    setHistory((h) => {
-      const exists = h.some((x) => x.id === conv.id);
-      return exists ? h.map((x) => (x.id === conv.id ? conv : x)) : [conv, ...h];
-    });
-  };
-
   const saveConversation = () => {
     if (chat.messages.length === 0) return false;
-    upsertHistory({ id: chat.id, date: new Date().toISOString(), messages: chat.messages });
+    setHistory((h) => {
+      const exists = h.some((x) => x.id === chat.id);
+      const conv = { id: chat.id, date: new Date().toISOString(), messages: chat.messages };
+      return exists ? h.map((x) => (x.id === chat.id ? conv : x)) : [conv, ...h];
+    });
     setToast("Conversation saved");
     return true;
   };
 
-  const startNewChat = () => {
-    if (chat.messages.length > 0) {
-      upsertHistory({ id: chat.id, date: new Date().toISOString(), messages: chat.messages });
-    }
-    setChat(newChatState());
-  };
+  // Current chat is already stored in history by the effect above; just reset.
+  const startNewChat = () => setChat(newChatState());
 
   return (
     <ChatContext.Provider
